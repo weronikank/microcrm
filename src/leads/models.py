@@ -69,10 +69,10 @@ class Lead(models.Model):
         CONTACTED = "contacted", "Contacted"
         REPLIED = "replied", "Replied"
         QUALIFIED = "qualified", "Qualified"
-        CALL_BOOKED = "call_booked", "Call booked"
-        ORG_CREATED = "org_created", "Org created"
-        FIRST_EVENT_LIVE = "first_event_live", "First event live"
-        CONVERTED = "converted", "Converted"
+        CALL_BOOKED = "call_booked", "Meeting booked"
+        ORG_CREATED = "org_created", "Proposal sent"
+        FIRST_EVENT_LIVE = "first_event_live", "Negotiating"
+        CONVERTED = "converted", "Agreement signed"
         LOST = "lost", "Lost"
 
     class Temperature(models.TextChoices):
