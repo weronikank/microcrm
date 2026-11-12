@@ -961,17 +961,17 @@ class LeadAdmin(ModelAdmin, SimpleHistoryAdmin, CityLinkMixin, LeadTypeLinkMixin
         queryset.update(status=models.Lead.Status.REPLIED)
         self.message_user(request, f"Updated {queryset.count()} leads to Replied", messages.SUCCESS)
 
-    @admin.action(description="→ Set status: Call booked")
+    @admin.action(description="→ Set status: Meeting booked")
     def set_status_call_booked(self, request: HttpRequest, queryset: QuerySet[models.Lead]) -> None:
         queryset.update(status=models.Lead.Status.CALL_BOOKED)
         self.message_user(request, f"Updated {queryset.count()} leads to Call booked", messages.SUCCESS)
 
-    @admin.action(description="→ Set status: Org created")
+    @admin.action(description="→ Set status: Proposal sent")
     def set_status_org_created(self, request: HttpRequest, queryset: QuerySet[models.Lead]) -> None:
         queryset.update(status=models.Lead.Status.ORG_CREATED)
         self.message_user(request, f"Updated {queryset.count()} leads to Org created", messages.SUCCESS)
 
-    @admin.action(description="→ Set status: First event live")
+    @admin.action(description="→ Set status: Agreement signed")
     def set_status_first_event_live(self, request: HttpRequest, queryset: QuerySet[models.Lead]) -> None:
         queryset.update(status=models.Lead.Status.FIRST_EVENT_LIVE)
         self.message_user(request, f"Updated {queryset.count()} leads to First event live", messages.SUCCESS)
