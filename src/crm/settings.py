@@ -199,6 +199,8 @@ UNFOLD = {
     "DASHBOARD_CALLBACK": "crm.dashboard.dashboard_callback",
     "SHOW_HISTORY": True,
     "SHOW_VIEW_ON_SITE": False,
+    "THEME": "light",
+    "STYLES": [lambda request: "/static/cream.css"],
     "COLORS": {
         "primary": {
             "50": "236 253 245",
