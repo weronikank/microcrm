@@ -166,7 +166,7 @@ GOOGLE_SSO_SUPERUSER_LIST = [
     email for email in config("GOOGLE_SSO_SUPERUSER_LIST", cast=Csv(), default="") if "@" in email
 ]
 GOOGLE_SSO_STAFF_LIST = GOOGLE_SSO_SUPERUSER_LIST
-SSO_SHOW_FORM_ON_ADMIN_PAGE = DEBUG
+SSO_SHOW_FORM_ON_ADMIN_PAGE = True
 
 # Gmail OAuth2 (per-user email sending via Gmail API)
 GMAIL_SCOPES: list[str] = [
